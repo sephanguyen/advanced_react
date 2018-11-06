@@ -1,0 +1,8 @@
+{
+    "apps" : [{
+      "name"        : "app",
+      "script"      : "./lib/server.js",
+      "watch"       : true,
+      "exec_interpreter" : "babel-node"
+    }]
+  }
