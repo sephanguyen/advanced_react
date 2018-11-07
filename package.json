@@ -5,8 +5,10 @@
   "main": "lib/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node lib/server.js",
-    "webpack": "webpack -wd"
+    "dev": "nodemon lib/server.js --exec babel-node",
+    "server": "babel-node lib/server.js",
+    "webpack": "webpack -wd",
+    "test": "jest --watch"
   },
   "babel": {
     "plugins": [
@@ -17,10 +19,6 @@
         }
       ],
       "@babel/plugin-transform-runtime",
-      "@babel/plugin-proposal-function-sent",
-      "@babel/plugin-proposal-export-namespace-from",
-      "@babel/plugin-proposal-numeric-separator",
-      "@babel/plugin-proposal-throw-expressions",
       "@babel/plugin-transform-react-jsx",
       "@babel/plugin-proposal-class-properties"
     ],
@@ -30,32 +28,35 @@
     ]
   },
   "dependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
     "@babel/node": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.2",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
-    "@babel/plugin-proposal-function-sent": "^7.1.0",
-    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
-    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.6",
     "pm2": "^3.2.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "regenerator-runtime": "^0.12.1",
     "webpack": "^4.25.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "webpack-cli": "^3.1.2"
   }
 }
