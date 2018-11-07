@@ -5,7 +5,7 @@
   "main": "lib/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon lib/server.js --exec babel-node",
+    "dev": "set NODE_PATH=./lib&& nodemon lib/server.js --exec babel-node",
     "server": "babel-node lib/server.js",
     "webpack": "webpack -wd",
     "test": "jest --watch"
